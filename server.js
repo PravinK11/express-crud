@@ -41,7 +41,7 @@ app.delete("/todo/remove",(req,res)=>{
     try {
         const body = req.body;
         const rem=body.todo;
-        console.log(rem);
+        // console.log(rem);
         
         const index=todos.indexOf(rem);
         if(index === -1){
@@ -49,7 +49,7 @@ app.delete("/todo/remove",(req,res)=>{
         }
         todos.splice(index,1)
         return res.status(200).send({message:"todo deleted successfully"})
-        console.log(todos)
+        // console.log(todos)
     } catch (error) {
         return res.status(500).send(error)
     }
