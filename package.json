@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/PravinK11/express-crud#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mysql2": "^3.16.3"
   }
 }
