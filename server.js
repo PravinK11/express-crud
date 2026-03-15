@@ -1,15 +1,18 @@
-const express = require("express")
-const cors = require("cors");
-const path = require("path");
 
+import express from 'express';
+import cors  from "cors";
+import path from "path";
+import dotenv from 'dotenv';
 
-const pool = require("./db")
+dotenv.config();
+
+import  pool from "./db.js"
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json())
-app.use(express.static(path.join(__dirname, "TODO_UI1")));
+// app.use(express.static(path.join(__dirname, "TODO_UI1")));
 
 app.get("/todo", async (req, res) => {
     try {
